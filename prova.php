@@ -1,4 +1,4 @@
-<script src="mlm/mngLang.js"></script>
+<script src="translate/mngLang.js"></script>
 
 
 <?php
