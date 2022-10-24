@@ -1,3 +1,4 @@
+<script src="mlm/config.json"></script>
 <script src="mlm/mngLang.js"></script>
 
 
