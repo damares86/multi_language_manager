@@ -1,20 +1,22 @@
-<?php
-// print_r("New cookie: ".$_COOKIE['lang']);
-// exit;
-?>
-<script src="../mlm/mngLang.js"></script>
+<!-- <script>
+    var home="../";
+</script>
+<script src="../mlm/mngLang.js"></script> -->
 <?php
 session_start();
-
 unset($_SESSION['refresh']);
+$path=explode('/',$_SERVER['PHP_SELF']);
+
+print_r($path);
+exit;
+
+require "../mlm/config.php";
 ?>
 <?php
     $file = basename($_SERVER['PHP_SELF']);
     $page_name = pathinfo($file, PATHINFO_FILENAME);
 
-    echo "Cookie: ".$_COOKIE['lang'];
-    // print_r($_COOKIE['language']);
-    // exit;
+    print_r("Cookie: ".$_COOKIE['lang']);
 ?>
 <br>
 <br>

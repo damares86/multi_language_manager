@@ -35,34 +35,14 @@ if (document.cookie.indexOf("lang=") >= 0) {
     // reading the cookie value
     langStr = document.cookie.indexOf("lang=");
     langStr = document.cookie.substring(langStr + 5, langStr + 7);
-    // now we will check if the language set match with the language folder
-    // otherwise we will translate the page name and redirect the user
-    // if(langStr!=folder&&!arrLang.includes(folder)){
-    //     console.log("ok");
-    //     // caso che sono nella root e la lingua invece è en
-    //     oldLang=mainLang;
-    //     window.location.href = 'mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename;
-    // }else 
-    console.log("Cookie from js: "+langStr);
+
     if(langStr!=folder&&arrLang.includes(folder)){
         console.log("ko");
         main="&main=no";
         oldLang=folder;
         // window.location.href = '../mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename+main;
     }
-    // // lingua cookie non corrisponde alla cartella
-    // console.log("CIAO");
-    // if(arrLang.includes(folder)){
-        //     // il nome della cartella (es. en) è nell'array delle lingue
-        //     oldLang=folder;
-        //     main="&main=no";
-        //     window.location.href = '../mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename+main;
-        // }else{
-            //     // il nome non è nell'array, vuol dire che la lingua deve essere il main e la folder root
-            //     oldLang=mainLang;
-            //     // window.location.href = 'mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename;
-            // }
-            // }
+
             
         } else {
             
@@ -79,12 +59,50 @@ if (document.cookie.indexOf("lang=") >= 0) {
             // otherwise we will translate the page name and redirect the user
             if(langStr!=folder){
                 if(arrLang.includes(folder)){
+                    // una delle lingue
+                    // la setto come lingua di partenza
+                    // es langStr=it e folder=en
                     oldLang=folder;
+                    window.location.href = home+'mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename;
                 }else{
-                    oldLang=mainLang;
+                    // la cartella non è tra le lingue secondarie
+                    // cioè è la root
+                    // devo confrontare se langStr==mainLang
+                    //      no: es langStr=en e folder=root
+                    //              oldLang=mainLang
+                    //              new_lang=langStr
+                    //      sì: rimango qui
+                    if(!langStr==mainLang){
+                        oldLang=mainLang;
+                        window.location.href = home+'mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename;
+                    }
                 }
-                var url = window.location.pathname;
+                
 
-        window.location.href = 'mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename;
     }
 }
+
+    // now we will check if the language set match with the language folder
+    // otherwise we will translate the page name and redirect the user
+    // if(langStr!=folder&&!arrLang.includes(folder)){
+    //     console.log("ok");
+    //     // caso che sono nella root e la lingua invece è en
+    //     oldLang=mainLang;
+    //     window.location.href = 'mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename;
+    // }else 
+
+
+
+    // // lingua cookie non corrisponde alla cartella
+    // console.log("CIAO");
+    // if(arrLang.includes(folder)){
+        //     // il nome della cartella (es. en) è nell'array delle lingue
+        //     oldLang=folder;
+        //     main="&main=no";
+        //     window.location.href = '../mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename+main;
+        // }else{
+            //     // il nome non è nell'array, vuol dire che la lingua deve essere il main e la folder root
+            //     oldLang=mainLang;
+            //     // window.location.href = 'mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename;
+            // }
+            // }
