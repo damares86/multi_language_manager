@@ -1,3 +1,7 @@
+<?php
+print_r("New cookie: ".$_COOKIE['lang']);
+exit;
+?>
 <script src="../mlm/mngLang.js"></script>
 
 
@@ -12,4 +16,4 @@
 <br>
 <br>
 <br>
-<a href="../mlm/translate.php?lang=en&main=no&page=<?=$page_name?>&new_lang=it">en</a>
+<a href="../mlm/translate.php?lang=en&page=<?=$page_name?>&new_lang=it">it</a>

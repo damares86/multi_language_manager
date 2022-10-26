@@ -1,5 +1,15 @@
-<script src="translate/mngLang.js"></script>
+<script src="../mlm/mngLang.js"></script>
+
 
 <?php
-echo $_COOKIE['lang'];
+    $file = basename($_SERVER['PHP_SELF']);
+    $page_name = pathinfo($file, PATHINFO_FILENAME);
+
+    echo "Cookie: ".$_COOKIE['lang'];
+    // print_r($_COOKIE['language']);
+    // exit;
 ?>
+<br>
+<br>
+<br>
+<a href="../mlm/translate.php?lang=en&page=<?=$page_name?>&new_lang=it">it</a>
