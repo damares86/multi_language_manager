@@ -1,5 +1,9 @@
 [{
     "it" : "prova",
     "en" : "try"
+},
+{
+    "it" : "index",
+    "en" : "index"
 }
 ]
