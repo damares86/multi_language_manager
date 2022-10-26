@@ -43,10 +43,12 @@ if (document.cookie.indexOf("lang=") >= 0) {
     //     oldLang=mainLang;
     //     window.location.href = 'mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename;
     // }else 
+    console.log("Cookie from js: "+langStr);
     if(langStr!=folder&&arrLang.includes(folder)){
+        console.log("ko");
         main="&main=no";
         oldLang=folder;
-        window.location.href = '../mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename+main;
+        // window.location.href = '../mlm/translate.php?lang='+oldLang+'&new_lang='+langStr+'&page='+pagename+main;
     }
     // // lingua cookie non corrisponde alla cartella
     // console.log("CIAO");

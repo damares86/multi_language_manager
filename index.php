@@ -1,6 +1,10 @@
 
 <script src="mlm/mngLang.js"></script>
+<?php
+session_start();
 
+unset($_SESSION['refresh']);
+?>
 
 <?php
     $file = basename($_SERVER['PHP_SELF']);

@@ -1,10 +1,13 @@
 <?php
-print_r("New cookie: ".$_COOKIE['lang']);
-exit;
+// print_r("New cookie: ".$_COOKIE['lang']);
+// exit;
 ?>
 <script src="../mlm/mngLang.js"></script>
+<?php
+session_start();
 
-
+unset($_SESSION['refresh']);
+?>
 <?php
     $file = basename($_SERVER['PHP_SELF']);
     $page_name = pathinfo($file, PATHINFO_FILENAME);
