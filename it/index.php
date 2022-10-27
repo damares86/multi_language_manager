@@ -11,10 +11,8 @@ require "../mlm/config.php";
 require "../mlm/redir.php";
 // TO THIS LINE AND PASTE AT THE TOP OF THE PAGE
 
-
-    print_r("Cookie: ".$_COOKIE['lang']);
 ?>
 <br>
 <br>
 <br>
-<a href="../mlm/translate.php?lang=en&page=<?=$page_name?>&new_lang=it">it</a>
+<a href="../mlm/translate.php?lang=it&page=<?=$page_name?>&new_lang=en">en</a>
