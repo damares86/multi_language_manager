@@ -1,18 +1,12 @@
-<!-- <script>
-    
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
-    var lang = urlParams.get('lang');
-    var new_lang = urlParams.get('new_lang');
-    var page = urlParams.get('page');
-
-    console.log(lang);
-    console.log(new_lang);
-    console.log(page);
-</script> -->
-
 <?php
 
+/////////////////////////////////////////////////
+//          MULTI LANGUAGE MANAGER
+//           A script by damares86 
+//      (https://github.com/damares86)
+/////////////////////////////////////////////////
+
+require "config.php";
 $lang=filter_input(INPUT_GET,"lang");
 $new_lang=filter_input(INPUT_GET,"new_lang");
 $page=filter_input(INPUT_GET,"page");
@@ -23,36 +17,27 @@ $json_arr = json_decode($data, true);
 
 $new_page="";
 
-for($i=0;$i<count($json_arr);$i++){
+// cycle the json file to find the page from we arrive
+// and then take the new page name, based on language
 
+for($i=0;$i<count($json_arr);$i++){
+    
     if($json_arr[$i][$lang]=="$page"){
         $new_page=$json_arr[$i][$new_lang];
-        ?>
-
-        <script>
-            // take the new_lang param and change the cookie value
-            var queryString = window.location.search;
-            var urlParams = new URLSearchParams(queryString);
-            var newLang=urlParams.get('new_lang');
-            var CookieDate = new Date, tmp;
-            CookieDate.setFullYear(CookieDate.getFullYear() +10);
-            document.cookie = "lang="+newLang+"; expires=" + CookieDate.toUTCString() + "; path=/";
-            console.log("new lang: "+newLang);
-        </script>
-
-        <?php
-        $folder="";
-
-        if(filter_input(INPUT_GET,"main")){
-            $folder="$new_lang/";
+        setcookie("lang",$new_lang, time()+ (3600),"/");
+        $subfolder="";
+        
+        // if it's not the main lang, we need to add its subfolder to the url
+        if(in_array($new_lang,$arr_lang)){
+            $oldLang=$folder;
+            $subfolder=$new_lang."/";
+        }else{
+            $oldLang=$main_lang;
         }
-
-        header("Location: ../".$folder.$new_page.".php");
+        
+        header("Location: ../".$subfolder.$new_page.".php");
         exit;
-    
     }
 }
-
-
 
 ?>

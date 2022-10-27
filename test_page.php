@@ -24,7 +24,7 @@ require "mlm/redir.php";
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="damares86" />
-        <title>Home - Multi Language Manager by damare86</title>
+        <title>Test page - Multi Language Manager by damare86</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -40,7 +40,7 @@ require "mlm/redir.php";
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="test_page.php">Test page</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">English</a>
@@ -56,7 +56,7 @@ require "mlm/redir.php";
         <!-- Page content-->
         <div class="container">
             <div class="text-center mt-5">
-                <h1>Welcome to your english homepage</h1>
+                <h1>Welcome to your english Test page</h1>
                 <p class="lead">Choose another language from the menu to change page and update your cookie</p>                
             </div>
         </div>
