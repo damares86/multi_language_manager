@@ -1,6 +1,7 @@
 <?php
 
-session_start();
+require "config.php";
+
 $lang=filter_input(INPUT_GET,"lang");
 $new_lang=filter_input(INPUT_GET,"new_lang");
 $page=filter_input(INPUT_GET,"page");
@@ -8,36 +9,29 @@ $main="";
 if(filter_input(INPUT_GET, "main")){
     $main="&main=no";
 }
-
 $json_file = 'pages.json';
 $data = file_get_contents($json_file);
 $json_arr = json_decode($data, true);
 
 $new_page="";
 
+
 for($i=0;$i<count($json_arr);$i++){
     
     if($json_arr[$i][$lang]=="$page"){
         $new_page=$json_arr[$i][$new_lang];
         setcookie("lang",$new_lang, time()+ (3600),"/");
-        if(empty($_SESSION['refresh'])){
-            $_SESSION['refresh']=1;
-            ?>
-
-            <script>
-                window.location.reload();
-            </script>
-
-        <?php
-                }
-        $folder="";
-
-
-        if(filter_input(INPUT_GET,"main")){
-            $folder=$new_lang."/";
+        $subfolder="";
+        
+        // if it's not the main lang, we need to add its subfolder to the url
+        if(in_array($new_lang,$arr_lang)){
+            $oldLang=$folder;
+            $subfolder=$new_lang."/";
+        }else{
+            $oldLang=$main_lang;
         }
-
-        header("Location: ../".$folder.$page.".php");
+        
+        header("Location: ../".$subfolder.$new_page.".php");
         exit;
     }
 }

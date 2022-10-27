@@ -1,8 +1,17 @@
 <?php
+require '../phpDebug/src/Debug/Debug.php';   			// if not using composer
+
+$debug = new \bdk\Debug(array(
+    'collect' => true,
+    'output' => true,
+));
 
 session_start();
 
 require "config.php";
+
+$subfolder="";
+$oldLang="";
 
 // checking the browser language
 $langServer=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
@@ -11,15 +20,20 @@ $langArrSelected=$langArr[0];
 $langArrFinal=explode('-',$langArrSelected);
 $langBrowser=$langArrFinal[0];
 
+// set the cookie with the browser language
+setcookie("lang",$langBrowser, time()+(10 * 365 * 24 * 60 * 60),"/");
 
-setcookie("lang",$langBrowser, time()+ (3600),"/");
-if(empty($_SESSION['refresh'])){
-    $_SESSION['refresh']=1;
-    ?>
+// catch the language of the page from we arrived here
+// and the page name
+$page=filter_input(INPUT_GET,"page");
+$folder=filter_input(INPUT_GET,"folder");
 
-    <script>
-        window.location.reload();
-    </script>
+if(in_array($folder,$arr_lang)){
+    $oldLang=$folder;
+}else{
+    $oldLang=$main_lang;
+}
 
-<?php
-        }
+header('Location: ../mlm/translate.php?lang='.$oldLang.'&new_lang='.$langBrowser.'&page='.$page.'');
+exit;
+
