@@ -1,24 +1,17 @@
 <?php
 
-require 'phpDebug/src/Debug/Debug.php';   			// if not using composer
+/////////////////////////////////////////////////
+//          MULTI LANGUAGE MANAGER
+//           A script by damares86 
+//      (https://github.com/damares86)
+/////////////////////////////////////////////////
 
-$debug = new \bdk\Debug(array(
-    'collect' => true,
-    'output' => true,
-));
-
+// COPY FROM THIS LINE 
 require "mlm/config.php";
+require "mlm/redir.php";
 
-$file = basename($_SERVER['PHP_SELF']);
-$page_name = pathinfo($file, PATHINFO_FILENAME);
-$path=explode('/',$_SERVER['PHP_SELF']);
-$idx=count($path)-2;
-$folder=$path[$idx];
 
-if(!isset($_COOKIE['lang'])){
-    header("Location: mlm/init.php?page=$page_name&folder=$folder");
-    exit;
-}
+// TO THIS LINE AND PASTE AT THE TOP OF THE PAGE
 
 print_r("Cookie: ".$_COOKIE['lang']);
 ?>

@@ -1,12 +1,10 @@
 <?php
-require '../phpDebug/src/Debug/Debug.php';   			// if not using composer
 
-$debug = new \bdk\Debug(array(
-    'collect' => true,
-    'output' => true,
-));
-
-session_start();
+/////////////////////////////////////////////////
+//          MULTI LANGUAGE MANAGER
+//           A script by damares86 
+//      (https://github.com/damares86)
+/////////////////////////////////////////////////
 
 require "config.php";
 
