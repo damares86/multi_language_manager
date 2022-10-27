@@ -8,7 +8,7 @@
 /////////////////////////////////////////////////
 
 // set the language of the page
-$actual_lang="it";
+$actual_lang="es";
 
 require "../mlm/config.php";
 require "../mlm/redir.php";
@@ -18,13 +18,13 @@ require "../mlm/redir.php";
 ?>
 
 <!DOCTYPE html>
-<html lang="it">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="damares86" />
-        <title>Home - Multi Language Manager by damare86</title>
+        <title>Pagina de inicio - Multi Language Manager by damare86</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -41,12 +41,12 @@ require "../mlm/redir.php";
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pagina_di_prova.php">Pagina di prova</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pagina_de_prueba.php">Pagina de prueba</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Italiano</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Español</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="../mlm/translate.php?lang=<?=$actual_lang?>&page=<?=$page_name?>&new_lang=en">Inglese</a></li>
-                                <li><a class="dropdown-item" href="../mlm/translate.php?lang=<?=$actual_lang?>&page=<?=$page_name?>&new_lang=es">Spagnolo</a></li>
+                                <li><a class="dropdown-item" href="../mlm/translate.php?lang=<?=$actual_lang?>&page=<?=$page_name?>&new_lang=en">Inglés</a></li>
+                                <li><a class="dropdown-item" href="../mlm/translate.php?lang=<?=$actual_lang?>&page=<?=$page_name?>&new_lang=it">Italiano</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -56,8 +56,8 @@ require "../mlm/redir.php";
         <!-- Page content-->
         <div class="container">
             <div class="text-center mt-5">
-                <h1>Benvenuto nella homepage in italiano</h1>
-                <p class="lead">Scegli un'altra lingua dal menu per cambiare lingua e aggiornare il cookie</p>                          
+                <h1>Bienvenido a la página de inicio de español</h1>
+                <p class="lead">Elige otro idioma del menú para cambiar de idioma y actualizar la cookie</p>                   
             </div>
         </div>
         <!-- Bootstrap core JS-->

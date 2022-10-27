@@ -12,7 +12,6 @@ $actual_lang="it";
 
 require "../mlm/config.php";
 require "../mlm/redir.php";
-
 // TO THIS LINE AND PASTE AT THE TOP OF EVERY PAGE
 
 ?>
@@ -24,7 +23,7 @@ require "../mlm/redir.php";
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="damares86" />
-        <title>Home - Multi Language Manager by damare86</title>
+        <title>Pagina di prova - Multi Language Manager by damare86</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -56,8 +55,8 @@ require "../mlm/redir.php";
         <!-- Page content-->
         <div class="container">
             <div class="text-center mt-5">
-                <h1>Benvenuto nella homepage in italiano</h1>
-                <p class="lead">Scegli un'altra lingua dal menu per cambiare lingua e aggiornare il cookie</p>                          
+                <h1>Benvenuto nella pagina di prova in italiano</h1>
+                <p class="lead">Scegli un'altra lingua dal menu per cambiare lingua e aggiornare il cookie</p>                
             </div>
         </div>
         <!-- Bootstrap core JS-->

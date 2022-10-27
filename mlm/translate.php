@@ -7,7 +7,6 @@
 /////////////////////////////////////////////////
 
 require "config.php";
-
 $lang=filter_input(INPUT_GET,"lang");
 $new_lang=filter_input(INPUT_GET,"new_lang");
 $page=filter_input(INPUT_GET,"page");
@@ -20,6 +19,7 @@ $new_page="";
 
 // cycle the json file to find the page from we arrive
 // and then take the new page name, based on language
+
 for($i=0;$i<count($json_arr);$i++){
     
     if($json_arr[$i][$lang]=="$page"){

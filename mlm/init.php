@@ -24,10 +24,10 @@ setcookie("lang",$langBrowser, time()+(10 * 365 * 24 * 60 * 60),"/");
 // catch the language of the page from we arrived here
 // and the page name
 $page=filter_input(INPUT_GET,"page");
-$folder=filter_input(INPUT_GET,"folder");
+$start_lang=filter_input(INPUT_GET,"lang");
 
-if(in_array($folder,$arr_lang)){
-    $oldLang=$folder;
+if(in_array($start_lang,$arr_lang)){
+    $oldLang=$start_lang;
 }else{
     $oldLang=$main_lang;
 }

@@ -7,6 +7,9 @@
 //      (https://github.com/damares86)
 /////////////////////////////////////////////////
 
+// set the language of the page
+$actual_lang="en";
+
 require "mlm/config.php";
 require "mlm/redir.php";
 
@@ -21,7 +24,7 @@ require "mlm/redir.php";
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="damares86" />
-        <title>Multi Language Manager by damare86</title>
+        <title>Home - Multi Language Manager by damare86</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -37,13 +40,13 @@ require "mlm/redir.php";
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="test_page.php">Test page</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Language Selection</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">English</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="mlm/translate.php?lang=<?=$actual_lang?>&page=<?=$page_name?>&new_lang=it">Italian</a></li>
+                                <li><a class="dropdown-item" href="mlm/translate.php?lang=<?=$actual_lang?>&page=<?=$page_name?>&new_lang=es">Spanish</a></li>
                             </ul>
                         </li>
                     </ul>

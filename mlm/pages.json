@@ -1,9 +1,13 @@
-[{
-    "it" : "prova",
-    "en" : "try"
+[
+{
+    "en" : "index",
+    "es" : "index",
+    "it" : "index"
+
 },
 {
-    "it" : "index",
-    "en" : "index"
+    "en" : "test_page",
+    "es" : "pagina_de_prueba",
+    "it" : "pagina_di_prova"
 }
 ]

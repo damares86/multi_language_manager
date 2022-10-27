@@ -18,15 +18,6 @@ $main_lang="en";
 $arr_lang=array('it','es');
 
 
-// catch the name of the page file
-// this will allow to translate it using the json file
-
-$path=explode('/',$_SERVER['PHP_SELF']);
-$file = basename($_SERVER['PHP_SELF']);
-$page_name = pathinfo($file, PATHINFO_FILENAME);
-$path=explode('/',$_SERVER['PHP_SELF']);
-$idx=count($path)-2;
-$folder=$path[$idx];
 
 
 
