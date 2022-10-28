@@ -4,10 +4,5 @@
     "es" : "index",
     "it" : "index"
 
-},
-{
-    "en" : "test_page",
-    "es" : "pagina_de_prueba",
-    "it" : "pagina_di_prova"
 }
 ]
