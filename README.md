@@ -1,6 +1,8 @@
 # Multi Language Manager
 A simple script to manage user browser language and user language choice using cookies. Automatically redirect user on the page of his language using a json legend.
 
+Demo here: http://mlmdemo.dmweblab.com/
+
 ## Download
 Simpy download the latest release from this repository (menu on the right).
 
